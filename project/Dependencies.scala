@@ -12,7 +12,7 @@ object Dependencies {
   lazy val jline = "jline" % "jline" % "2.14.3"
   lazy val ivy = "org.scala-sbt.ivy" % "ivy" % "2.3.0-sbt-48dd0744422128446aee9ac31aa356ee203cc9f4"
   lazy val jsch = "com.jcraft" % "jsch" % "0.1.50" intransitive ()
-  lazy val sbinary = "org.scala-tools.sbinary" %% "sbinary" % "0.4.2"
+  lazy val sbinary = "org.scala-sbt" %% "sbinary" % "0.4.4"
   lazy val sbtSerialization = "org.scala-sbt" %% "serialization" % "0.1.2"
   lazy val scalaCompiler = Def.setting { "org.scala-lang" % "scala-compiler" % scalaVersion.value }
   lazy val scalaReflect = Def.setting { "org.scala-lang" % "scala-reflect" % scalaVersion.value }
@@ -31,7 +31,7 @@ object Dependencies {
         case _ => ("org.scala-lang.modules" %% name % moduleVersion) :: Nil
       }
     }
-  lazy val scalaXml = scala211Module("scala-xml", "1.0.1")
+  lazy val scalaXml = scala211Module("scala-xml", "1.0.6")
   lazy val scalaParsers = scala211Module("scala-parser-combinators", "1.0.1")
 
   // Maven related dependnecy craziness
