@@ -17,8 +17,8 @@ object Dependencies {
   lazy val scalaCompiler = Def.setting { "org.scala-lang" % "scala-compiler" % scalaVersion.value }
   lazy val scalaReflect = Def.setting { "org.scala-lang" % "scala-reflect" % scalaVersion.value }
   lazy val testInterface = "org.scala-sbt" % "test-interface" % "1.0"
-  lazy val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.11.4"
-  lazy val specs2 = "org.specs2" %% "specs2" % "2.3.11"
+  lazy val scalaCheck = "org.scalacheck" %% "scalacheck" % "1.13.5"
+  lazy val specs2 = "org.specs2" %% "specs2" % "2.4.17"
   lazy val junit = "junit" % "junit" % "4.11"
   lazy val launcherInterface = "org.scala-sbt" % "launcher-interface" % "1.0.1"
   lazy val rawLauncher = "org.scala-sbt" % "launcher" % "1.0.1"
