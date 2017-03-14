@@ -15,7 +15,7 @@ def buildLevelSettings: Seq[Setting[_]] = inThisBuild(Seq(
 ))
 
 def commonSettings: Seq[Setting[_]] = Seq(
-  scalaVersion := scala210,
+  scalaVersion := scala212,
   publishArtifact in packageDoc := false,
   publishMavenStyle := false,
   componentID := None,
@@ -26,7 +26,7 @@ def commonSettings: Seq[Setting[_]] = Seq(
   testOptions += Tests.Argument(TestFrameworks.ScalaCheck, "-w", "1"),
   javacOptions in compile ++= Seq("-target", "6", "-source", "6", "-Xlint", "-Xlint:-serial"),
   incOptions := incOptions.value.withNameHashing(true),
-  crossScalaVersions := Seq(scala210),
+  crossScalaVersions := Seq(scala212),
   bintrayPackage := (bintrayPackage in ThisBuild).value,
   bintrayRepository := (bintrayRepository in ThisBuild).value,
   test in assembly := {},
@@ -155,8 +155,8 @@ lazy val controlProj = (project in utilPath / "control").
     baseSettings,
     Util.crossBuild,
     name := "Control",
-    crossScalaVersions := Seq(scala210, scala211)
-    // crossScalaVersions := Seq(scala210, scala211, scala212) // sbt 0.13 is JDK 6, can't do 2.12
+    crossScalaVersions := Seq(scala212, scala211)
+    // crossScalaVersions := Seq(scala212, scala211, scala212) // sbt 0.13 is JDK 6, can't do 2.12
   )
 
 lazy val collectionProj = (project in utilPath / "collection").
@@ -165,7 +165,7 @@ lazy val collectionProj = (project in utilPath / "collection").
     Util.keywordsSettings,
     Util.crossBuild,
     name := "Collections",
-    crossScalaVersions := Seq(scala210, scala211)
+    crossScalaVersions := Seq(scala212, scala211)
   )
 
 lazy val applyMacroProj = (project in utilPath / "appmacro").
@@ -193,8 +193,8 @@ lazy val ioProj = (project in utilPath / "io").
     Util.crossBuild,
     name := "IO",
     libraryDependencies += scalaCompiler.value % Test,
-    crossScalaVersions := Seq(scala210, scala211)
-    // crossScalaVersions := Seq(scala210, scala211, scala212) // sbt 0.13 is JDK 6, can't do 2.12
+    crossScalaVersions := Seq(scala212, scala211)
+    // crossScalaVersions := Seq(scala212, scala211, scala212) // sbt 0.13 is JDK 6, can't do 2.12
   )
 
 // Utilities related to reflection, managing Scala versions, and custom class loaders
@@ -214,7 +214,7 @@ lazy val completeProj = (project in utilPath / "complete").
     Util.crossBuild,
     name := "Completion",
     libraryDependencies += jline,
-    crossScalaVersions := Seq(scala210, scala211)
+    crossScalaVersions := Seq(scala212, scala211)
   )
 
 // logging
