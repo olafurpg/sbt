@@ -8,8 +8,7 @@ import local.Scripted
 import scala.util.Try
 
 ThisBuild / version := {
-  val v = "1.4.0-SNAPSHOT"
-  nightlyVersion.getOrElse(v)
+  "1.4.0-forkmain"
 }
 ThisBuild / scalafmtOnCompile := !(Global / insideCI).value
 ThisBuild / Test / scalafmtOnCompile := !(Global / insideCI).value
@@ -20,7 +19,7 @@ ThisBuild / turbo := true
 def buildLevelSettings: Seq[Setting[_]] =
   inThisBuild(
     Seq(
-      organization := "org.scala-sbt",
+      organization := "com.geirsson",
       description := "sbt is an interactive build tool",
       bintrayOrganization := Some("sbt"),
       bintrayRepository := {
