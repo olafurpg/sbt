@@ -117,7 +117,14 @@ final public class ForkMain {
 	// ----------------------------------------------------------------------------------------------------------------
 
 	public static void main(final String[] args) throws Exception {
-    main(args, new Object().getClass().getClassLoader());
+    // + sbt deviation
+    ClassLoader classLoader = new Run().getClass().getClassLoader();
+    try {
+      main(args, classLoader);
+    } finally {
+      System.exit(0);
+    }
+    // - sbt deviation
   }
 
 	public static void main(final String[] args, ClassLoader classLoader) throws Exception {

@@ -8,7 +8,7 @@ import local.Scripted
 import scala.util.Try
 
 ThisBuild / version := {
-  "1.4.0-forkmain"
+  "1.4.1-forkmain"
 }
 ThisBuild / scalafmtOnCompile := !(Global / insideCI).value
 ThisBuild / Test / scalafmtOnCompile := !(Global / insideCI).value
